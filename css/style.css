@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Inknut+Antiqua:wght@300&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper header {
+  font-family: "Ubuntu", sans-serif;
+  color: #E1EAEC;
+  height: 100%;
+  text-transform: uppercase;
+  background-image: url("../img/header_background_v1.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+.main-wrapper header .top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.main-wrapper header .top-wrapper .logo {
+  width: 20%;
+  height: 10%;
+}
+.main-wrapper header .top-wrapper .logo img {
+  width: 100%;
+  height: 100%;
+}
+.main-wrapper header nav {
+  display: flex;
+  height: 100%;
+}
+.main-wrapper header nav a {
+  display: block;
+  padding: 1rem 5rem;
+  background-color: #01ACAC;
+  margin-top: 1rem;
+  color: #E1EAEC;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgba(1, 1, 1, 0);
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 24px;
+}
+.main-wrapper header nav a:nth-child(2) {
+  border-left: 2px solid #EFEFEF;
+  border-right: 2px solid #EFEFEF;
+}
+.main-wrapper header section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 21rem;
+  padding-bottom: 30rem;
+}
+.main-wrapper header section h1 {
+  font-size: 26px;
+}
+.main-wrapper header section a {
+  display: block;
+  padding: 1rem 5rem;
+  background-color: #01ACAC;
+  margin-top: 1rem;
+  color: #E1EAEC;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 1rem 4rem;
+}
+.main-wrapper main {
+  width: 70%;
+  margin: 0 auto;
+}
+.main-wrapper main .toolbar {
+  display: flex;
+  justify-content: flex-end;
+}
+.main-wrapper main .toolbar input {
+  padding: .7rem;
+  margin: .5rem .5rem;
+}
+.main-wrapper main .post-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-wrapper main .post-list h1 {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Cantarell", sans-serif;
+}
+.main-wrapper main .post-list article {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #EFEFEF;
+}
+.main-wrapper main .post-list article .post {
+  padding-left: 2rem;
+}
+.main-wrapper main .post-list article .post .post-description {
+  padding: 1rem .4rem;
+  border-bottom: 1px solid #8DA2AC;
+  color: #EA1E1E;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.main-wrapper main .post-list article .post h3 {
+  padding: 1rem 0 .5rem 0;
+  text-transform: uppercase;
+  color: #01ACAC;
+  font-weight: 900;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+.main-wrapper main .post-list article .post p {
+  line-height: 23px;
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+}
+.main-wrapper main .post-list article div .btn {
+  border: none;
+  display: block;
+  padding: 1rem 5rem;
+  background-color: #01ACAC;
+  margin-top: 1rem;
+  color: #E1EAEC;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 30.5rem;
+}
+.main-wrapper main .about {
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+.main-wrapper main .about h1 {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Cantarell", sans-serif;
+}
+.main-wrapper main .about p {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  line-height: 23px;
+}
+.main-wrapper main .about div img {
+  width: 100%;
+}
+.main-wrapper main .contact-form h1 {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Cantarell", sans-serif;
+}
+.main-wrapper main .contact-form h4 {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: "Cantarell", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.main-wrapper main .contact-form .wrap-form label {
+  color: #01ACAC;
+  align-self: end;
+}
+.main-wrapper main .contact-form .wrap-form .wrap-inputs {
+  display: flex;
+  width: 100%;
+}
+.main-wrapper main .contact-form .wrap-form .wrap-inputs div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem 0;
+}
+.main-wrapper main .contact-form .wrap-form .wrap-inputs div label[for="name"] {
+  padding-right: 7px;
+}
+.main-wrapper main .contact-form .wrap-form .wrap-inputs div input[name="email"] {
+  align-self: end;
+}
+.main-wrapper main .contact-form .wrap-form .wrap-inputs div input {
+  height: 2.5rem;
+  width: 99%;
+  padding: 1rem;
+  font-size: 15px;
+  border: 2px solid #8DA2AC;
+}
+.main-wrapper main .contact-form .wrap-form .field {
+  display: flex;
+  flex-direction: column;
+}
+.main-wrapper main .contact-form .wrap-form .field textarea[name="field"] {
+  padding: 1rem;
+  font-size: 15px;
+  border: 2px solid #8DA2AC;
+  height: 7rem;
+}
+.main-wrapper main .contact-form .wrap-form .send-btn {
+  border: none;
+  display: block;
+  padding: 1rem 5rem;
+  background-color: #01ACAC;
+  margin-top: 1rem;
+  color: #E1EAEC;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 53.5rem;
+}
+.main-wrapper footer {
+  margin: 2rem 0 2rem 1rem;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

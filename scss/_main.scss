@@ -1,0 +1,291 @@
+// Write your styles here
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Inknut+Antiqua:wght@300&family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//mixin
+@mixin setting-btns {
+  display: block;
+  padding: 1rem 5rem;
+  background-color: $green;
+  margin-top: 1rem;
+  color: $white;
+  text-decoration: none;
+  font-size: $fz-18;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin bt-settings-null {
+  border: none;
+}
+
+@mixin text-h-settings {
+  text-align: end;
+  text-transform: uppercase;
+  font-family: $font-cantarell;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin input-textarea-settings {
+  padding: 1rem;
+  font-size: $fz-15;
+  border: 2px solid $darkgreen;
+}
+
+@mixin w-h($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+
+.main-wrapper {
+
+  header {
+    font-family: $font-ubuntu;
+    color: $white;
+    height: $w-100;
+    text-transform: uppercase;
+    background-image: url("../img/header_background_v1.jpg");
+    background-size: 100vw;
+    background-repeat: no-repeat;
+
+    .top-wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      .logo {
+        @include w-h(20%, 10%);
+
+        img {
+          @include w-h($w-100, $w-100);
+        }
+
+      }
+
+    }
+
+    nav {
+      display: flex;
+      height: $w-100;
+
+      a {
+        @include setting-btns;
+        background-color: rgba(1, 1, 1, 0);
+        margin-top: 0;
+        font-weight: bold;
+        font-size: $fz-24;
+
+        &:nth-child(2) {
+          border-left: 2px solid $grey;
+          border-right: 2px solid $grey;
+        }
+
+      }
+
+    }
+
+    section {
+      @include flex-column;
+
+      justify-content: center;
+      align-items: center;
+      margin-top: 21rem;
+      padding-bottom: 30rem;
+
+      h1 {
+        font-size: $fz-26;
+      }
+
+      a {
+        @include setting-btns;
+        padding: 1rem 4rem;
+      }
+
+    }
+
+  }
+
+  main {
+    width: 70%;
+    margin: 0 auto;
+
+    .toolbar {
+      display: flex;
+      justify-content: flex-end;
+
+      input {
+        padding: .7rem;
+        margin: .5rem .5rem;
+      }
+
+    }
+
+    .post-list {
+      width: $w-100;
+      @include flex-column;
+
+      h1 {
+        @include text-h-settings;
+      }
+
+      article {
+        display: flex;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background-color: $grey;
+
+        .post {
+          padding-left: 2rem;
+
+          .post-description {
+            padding: 1rem .4rem;
+            border-bottom: 1px solid $darkgreen;
+            color: $red;
+            font-family: $font-roboto;
+            font-weight: 300;
+          }
+
+          h3 {
+            padding: 1rem 0 .5rem 0;
+            text-transform: uppercase;
+            color: $green;
+            font-weight: 900;
+            font-size: $fz-24;
+            font-family: $font-roboto;
+          }
+
+          p {
+            line-height: 23px;
+            font-size: $fz-15;
+            font-family: $font-ubuntu;
+          }
+
+        }
+
+        div {
+          .btn {
+            @include bt-settings-null;
+            @include setting-btns;
+
+            margin-left: 30.5rem;
+          }
+
+        }
+
+      }
+
+    }
+
+    .about {
+      margin-bottom: 2rem;
+      font-size: $fz-18;
+
+      h1 {
+        @include text-h-settings;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        line-height: 23px;
+      }
+
+      div {
+        img {
+          width: $w-100;
+        }
+
+      }
+
+    }
+
+    .contact-form {
+
+      h1 {
+        @include text-h-settings;
+      }
+
+      h4 {
+        @include text-h-settings;
+        font-family: $font-roboto;
+      }
+
+      .wrap-form {
+
+        label {
+          color: $green;
+          align-self: end;
+        }
+
+        .wrap-inputs {
+          display: flex;
+          width: $w-100;
+
+          div {
+            @include flex-column;
+            width: $w-100;
+            margin: 2rem 0;
+
+            label[for="name"] {
+              padding-right: 7px;
+            }
+
+            input[name="email"] {
+              align-self: end;
+            }
+
+            input {
+              height: 2.5rem;
+              width: 99%;
+              @include input-textarea-settings;
+            }
+
+          }
+
+        }
+
+        .field {
+          @include flex-column;
+
+          textarea[name="field"] {
+            @include input-textarea-settings;
+            height: 7rem;
+          }
+
+        }
+
+        .send-btn {
+          @include bt-settings-null;
+          @include setting-btns;
+          margin-left: 53.5rem;;
+        }
+
+      }
+
+    }
+
+  }
+
+  footer {
+    margin: 2rem 0 2rem 1rem;
+    font-size: $fz-15;
+  }
+
+}
+
+
